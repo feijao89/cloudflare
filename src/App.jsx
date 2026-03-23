@@ -2,33 +2,33 @@ import './App.css'
 
 const featuredProjects = [
   {
-    title: 'Landing premium para marca pessoal',
-    category: 'Brand site',
+    title: 'Suporte institucional com foco em continuidade',
+    category: 'Operacao e estabilidade',
     description:
-      'Site focado em autoridade, com narrativa visual forte, animações leves e CTA direto para conversao.',
-    metrics: 'React, motion design e SEO tecnico',
+      'Atuacao voltada para manter ambientes funcionando, reduzir friccao operacional e acelerar a resposta a demandas internas.',
+    metrics: 'PCMG, suporte senior e confiabilidade',
   },
   {
-    title: 'Dashboard para produto digital',
-    category: 'Web app',
+    title: 'Automacoes para ganhar escala no dia a dia',
+    category: 'Automacao de processos',
     description:
-      'Interface modular para dados, onboarding e areas privadas com design system consistente.',
-    metrics: 'UX orientada a performance e clareza',
+      'Uso de scripts e integracoes para reduzir tarefas repetitivas, padronizar fluxos e liberar tempo para o que exige analise real.',
+    metrics: 'Produtividade, padronizacao e eficiencia',
   },
   {
-    title: 'Pagina de vendas com alta credibilidade',
-    category: 'Conversion page',
+    title: 'Primeiro portfolio publicado com deploy continuo',
+    category: 'Presenca digital',
     description:
-      'Estrutura pensada para destacar prova social, diferencial do servico e captura de leads.',
-    metrics: 'Layout responsivo e deploy continuo',
+      'Este site marca o inicio da minha presenca tecnica online, com stack moderna, hospedagem global e base pronta para evoluir.',
+    metrics: 'React, Vite, Cloudflare e deploy automatico',
   },
 ]
 
 const capabilities = [
-  'Direcao visual com cara de produto serio',
-  'React moderno com codigo limpo e escalavel',
-  'Performance, SEO basico e responsividade real',
-  'Deploy simples no Cloudflare Pages com dominio proprio',
+  'Suporte institucional com visao pratica de operacao',
+  'Analise de sistemas com foco em clareza e continuidade',
+  'Automacoes para reduzir retrabalho e acelerar entregas',
+  'Aprendizado constante em desenvolvimento e integracoes web',
 ]
 
 function App() {
@@ -38,8 +38,8 @@ function App() {
         <div className="brand">
           <span className="brand-mark">F</span>
           <div>
-            <strong>feijao89 portfolio</strong>
-            <span>Design, React e experiencia digital</span>
+            <strong>Vanderlei Morais de Castro de Souza</strong>
+            <span>Analista de sistemas, suporte senior e automacoes</span>
           </div>
         </div>
 
@@ -53,68 +53,70 @@ function App() {
       <main>
         <section className="hero-panel">
           <div className="hero-copy">
-            <p className="eyebrow">Portfolio em React pronto para Cloudflare</p>
-            <h1>Presenca digital com visual profissional e estrutura de produto.</h1>
+            <p className="eyebrow">Portfolio profissional</p>
+            <h1>Analise, suporte e automacoes com foco em resolver de verdade.</h1>
             <p className="lead">
-              Um portfolio nao precisa parecer template. Ele precisa transmitir
-              nivel tecnico, confianca e clareza em poucos segundos.
+              Sou Vanderlei Morais de Castro de Souza. Atuo com suporte
+              institucional na PCMG, com perfil senior, visao operacional e
+              interesse constante em desenvolvimento, integracoes e automacoes
+              que tornem o trabalho mais inteligente e eficiente.
             </p>
 
             <div className="hero-actions">
-              <a className="button button-primary" href="#contato">
-                Falar sobre projeto
+              <a className="button button-primary" href="mailto:vanderleicastroesouza@gmail.com">
+                Entrar em contato
               </a>
               <a className="button button-secondary" href="#projetos">
-                Ver trabalhos
+                Ver destaque
               </a>
             </div>
 
             <ul className="hero-stats">
               <li>
                 <strong>01</strong>
-                <span>Deploy estatico e rapido</span>
+                <span>Suporte institucional e operacao</span>
               </li>
               <li>
                 <strong>02</strong>
-                <span>Arquitetura simples de manter</span>
+                <span>Analise de sistemas e melhoria continua</span>
               </li>
               <li>
                 <strong>03</strong>
-                <span>Pronto para dominio proprio</span>
+                <span>Automacoes para ganhar tempo e consistencia</span>
               </li>
             </ul>
           </div>
 
           <aside className="hero-card">
-            <p>Stack sugerida</p>
-            <h2>React + Vite + Cloudflare Pages</h2>
+            <p>Perfil profissional</p>
+            <h2>Base tecnica, experiencia pratica e evolucao constante.</h2>
             <div className="stack-grid">
-              <span>React</span>
-              <span>Vite</span>
-              <span>CSS custom</span>
-              <span>Pages</span>
+              <span>Suporte senior</span>
+              <span>Analise de sistemas</span>
+              <span>Automacoes</span>
+              <span>Desenvolvimento web</span>
             </div>
             <div className="quote-block">
-              <span>Objetivo</span>
+              <span>Direcao</span>
               <p>
-                Criar uma vitrine pessoal elegante, veloz e facil de publicar
-                sem custo de servidor.
+                Transformar experiencia operacional em solucoes mais rapidas,
+                confiaveis e escalaveis para o dia a dia.
               </p>
             </div>
           </aside>
         </section>
 
         <section className="strip">
-          <p>Design intencional</p>
-          <p>Codigo enxuto</p>
-          <p>Hospedagem gratuita</p>
-          <p>Escalavel quando precisar</p>
+          <p>Experiencia de campo</p>
+          <p>Raciocinio tecnico</p>
+          <p>Automacao pratica</p>
+          <p>Evolucao continua</p>
         </section>
 
         <section className="section" id="projetos">
           <div className="section-heading">
-            <p className="eyebrow">Projetos em destaque</p>
-            <h2>Casos pensados para vender competencia, nao so preencher tela.</h2>
+            <p className="eyebrow">Frentes em destaque</p>
+            <h2>Minha atuacao combina operacao, analise e melhoria continua.</h2>
           </div>
 
           <div className="project-grid">
@@ -131,8 +133,8 @@ function App() {
 
         <section className="section split-section" id="servicos">
           <div className="section-heading">
-            <p className="eyebrow">O que este site comunica</p>
-            <h2>Uma apresentacao que posiciona voce como profissional serio.</h2>
+            <p className="eyebrow">Competencias</p>
+            <h2>Uma base profissional orientada a estabilidade, eficiencia e entrega.</h2>
           </div>
 
           <div className="capability-list">
@@ -148,19 +150,20 @@ function App() {
         <section className="section contact-panel" id="contato">
           <div>
             <p className="eyebrow">Contato</p>
-            <h2>Pronto para publicar e depois conectar a um dominio seu.</h2>
+            <h2>Aberto a conexoes, projetos e oportunidades de colaboracao.</h2>
             <p className="contact-copy">
-              Troque os textos, seus links reais e seus projetos. A estrutura ja
-              esta pronta para isso.
+              Este portfolio e o ponto de partida da minha presenca profissional
+              online. A partir daqui, novos projetos e automacoes serao
+              adicionados de forma continua.
             </p>
           </div>
 
           <div className="contact-actions">
-            <a className="button button-primary" href="mailto:contato@seudominio.com">
-              contato@seudominio.com
+            <a className="button button-primary" href="mailto:vanderleicastroesouza@gmail.com">
+              vanderleicastroesouza@gmail.com
             </a>
-            <a className="button button-secondary" href="https://www.linkedin.com" target="_blank" rel="noreferrer">
-              LinkedIn
+            <a className="button button-secondary" href="https://www.instagram.com/vanderlei1301/" target="_blank" rel="noreferrer">
+              Instagram
             </a>
           </div>
         </section>
