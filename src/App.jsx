@@ -36,9 +36,9 @@ function App() {
     <div className="site-shell">
       <header className="topbar">
         <div className="brand">
-          <span className="brand-mark">M</span>
+          <span className="brand-mark">F</span>
           <div>
-            <strong>Marcos Portfolio</strong>
+            <strong>feijao89 portfolio</strong>
             <span>Design, React e experiencia digital</span>
           </div>
         </div>
