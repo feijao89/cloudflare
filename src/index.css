@@ -1,0 +1,87 @@
+:root {
+  font-family: 'Inter Tight', 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #31404d;
+  background:
+    radial-gradient(circle at top left, #fff1e7 0, transparent 28%),
+    radial-gradient(circle at right 20%, #dcecff 0, transparent 24%),
+    linear-gradient(180deg, #f7f3ec 0%, #eef2f6 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --paper: #fffdf8;
+  --surface: rgba(255, 252, 247, 0.72);
+  --surface-strong: rgba(255, 247, 238, 0.92);
+  --line: rgba(55, 72, 91, 0.12);
+  --text-strong: #18212b;
+  --text-soft: #5f6b78;
+  --accent: #f08a24;
+  --accent-strong: #b9531a;
+  --panel-shadow: 0 20px 80px rgba(18, 29, 43, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+body,
+button,
+a {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+#root {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 1.2rem 0 3rem;
+}
+
+h1,
+h2,
+h3,
+strong {
+  margin: 0;
+  color: var(--text-strong);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 0.98;
+}
+
+h1 {
+  max-width: 12ch;
+  font-size: clamp(3.5rem, 8vw, 6.4rem);
+  letter-spacing: -0.05em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+h3 {
+  font-size: 1.4rem;
+  letter-spacing: -0.03em;
+}
+
+p {
+  margin: 0;
+}
+
+::selection {
+  background: rgba(240, 138, 36, 0.22);
+}
