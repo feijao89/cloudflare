@@ -66,24 +66,32 @@ const conceptSites = [
     tag: 'Food brand',
     summary:
       'Landing vibrante para cardapio, combos, reservas e pedidos com visual forte de marca.',
+    href: '/hamburgueria',
+    cta: 'Abrir microsite',
   },
   {
     title: 'Marca de refrigerante',
     tag: 'Beverage campaign',
     summary:
       'Site promocional com storytelling visual, cores fortes, produto em destaque e campanha sazonal.',
+    href: '#contato',
+    cta: 'Transformar em case',
   },
   {
     title: 'Loja de carros',
     tag: 'Automotive showcase',
     summary:
       'Catalogo com carros em destaque, fichas tecnicas, financiamento e apresentacao premium.',
+    href: '#contato',
+    cta: 'Transformar em case',
   },
   {
     title: 'Clinica institucional',
     tag: 'Trust-driven website',
     summary:
       'Site focado em credibilidade, servicos, equipe, agenda e clareza de atendimento.',
+    href: '#contato',
+    cta: 'Transformar em case',
   },
 ]
 
@@ -363,8 +371,8 @@ function HomePage() {
               <span className="project-category">{site.tag}</span>
               <h3>{site.title}</h3>
               <p>{site.summary}</p>
-              <a className="text-link" href="#contato">
-                Transformar em case
+              <a className="text-link" href={site.href}>
+                {site.cta}
               </a>
             </article>
           ))}
