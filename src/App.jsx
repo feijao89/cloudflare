@@ -130,9 +130,32 @@ const categoryMap = {
 function App() {
   const pathname = window.location.pathname
   const isNewsPage = pathname === '/noticias'
+  const [pointer, setPointer] = useState({ x: 0, y: 0 })
+
+  useEffect(() => {
+    function handlePointerMove(event) {
+      const nextX = event.clientX / window.innerWidth - 0.5
+      const nextY = event.clientY / window.innerHeight - 0.5
+      setPointer({ x: nextX, y: nextY })
+    }
+
+    window.addEventListener('pointermove', handlePointerMove)
+
+    return () => {
+      window.removeEventListener('pointermove', handlePointerMove)
+    }
+  }, [])
+
+  const shellStyle = {
+    '--pointer-x': `${pointer.x.toFixed(4)}`,
+    '--pointer-y': `${pointer.y.toFixed(4)}`,
+  }
 
   return (
-    <div className={`site-shell ${isNewsPage ? 'is-news' : 'is-home'}`}>
+    <div
+      className={`site-shell ${isNewsPage ? 'is-news' : 'is-home'}`}
+      style={shellStyle}
+    >
       <SiteHeader isNewsPage={isNewsPage} />
       <main>{isNewsPage ? <NewsPage /> : <HomePage />}</main>
     </div>
@@ -214,7 +237,7 @@ function HomePage() {
           </ul>
         </div>
 
-        <aside className="hero-card">
+        <aside className="hero-card reactive-panel">
           <p>Radar profissional</p>
           <h2>Base tecnica forte com construcao visual em aceleracao.</h2>
           <div className="hero-orbit">
@@ -254,7 +277,7 @@ function HomePage() {
 
         <div className="project-grid">
           {featuredProjects.map((project) => (
-            <article className="project-card" key={project.title}>
+            <article className="project-card reactive-card" key={project.title}>
               <span className="project-category">{project.category}</span>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
@@ -274,7 +297,7 @@ function HomePage() {
         </div>
 
         <div className="builder-grid">
-          <article className="builder-card">
+          <article className="builder-card reactive-card">
             <span className="project-category">Institutional</span>
             <h3>Sites institucionais modernos</h3>
             <p>
@@ -283,7 +306,7 @@ function HomePage() {
             </p>
           </article>
 
-          <article className="builder-card">
+          <article className="builder-card reactive-card">
             <span className="project-category">Landing pages</span>
             <h3>Paginas de campanha e produto</h3>
             <p>
@@ -292,7 +315,7 @@ function HomePage() {
             </p>
           </article>
 
-          <article className="builder-card">
+          <article className="builder-card reactive-card">
             <span className="project-category">Dashboards</span>
             <h3>Paineis e interfaces internas</h3>
             <p>
@@ -314,7 +337,7 @@ function HomePage() {
 
         <div className="lab-grid">
           {labs.map((lab) => (
-            <article className="lab-card" key={lab.name}>
+            <article className="lab-card reactive-card" key={lab.name}>
               <div className="lab-head">
                 <h3>{lab.name}</h3>
                 <span className="lab-status">{lab.status}</span>
@@ -336,7 +359,7 @@ function HomePage() {
 
         <div className="concept-grid">
           {conceptSites.map((site) => (
-            <article className="concept-card" key={site.title}>
+            <article className="concept-card reactive-card" key={site.title}>
               <span className="project-category">{site.tag}</span>
               <h3>{site.title}</h3>
               <p>{site.summary}</p>
@@ -359,7 +382,7 @@ function HomePage() {
 
         <div className="capability-list">
           {capabilities.map((item) => (
-            <div className="capability-item" key={item}>
+            <div className="capability-item reactive-card" key={item}>
               <span className="capability-index">+</span>
               <p>{item}</p>
             </div>
@@ -493,7 +516,7 @@ function NewsPage() {
           </div>
         </div>
 
-        <aside className="news-sidepanel">
+        <aside className="news-sidepanel reactive-panel">
           <div className="signal-board">
             <div>
               <strong>{counts.total}</strong>
@@ -538,7 +561,7 @@ function NewsPage() {
 
         {featured ? (
           <div className="headline-layout">
-            <article className="headline-card">
+            <article className="headline-card reactive-panel">
               <div className="headline-topline">
                 <span className="project-category">
                   {categoryMap[featured.category]}
@@ -562,7 +585,7 @@ function NewsPage() {
 
             <div className="news-grid">
               {rest.map((item) => (
-                <article className="news-card" key={item.id}>
+                <article className="news-card reactive-card" key={item.id}>
                   <div className="headline-topline">
                     <span className="project-category">{categoryMap[item.category]}</span>
                     <span className="headline-source">{item.source}</span>
