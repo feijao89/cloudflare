@@ -303,7 +303,7 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section split-section" id="laboratorio">
+      <section className="section lab-section" id="laboratorio">
         <div className="section-heading">
           <p className="eyebrow">Laboratorio</p>
           <h2>

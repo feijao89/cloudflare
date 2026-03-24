@@ -494,6 +494,13 @@
     var(--surface);
 }
 
+.lab-section {
+  background:
+    radial-gradient(circle at top right, rgba(0, 212, 162, 0.08), transparent 30%),
+    radial-gradient(circle at left center, rgba(255, 122, 31, 0.08), transparent 26%),
+    var(--surface);
+}
+
 .split-section {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
